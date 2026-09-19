@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temp Tracker</title>
+    <link rel="stylesheet" href="./estilos.css" />
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Buscador -->
+        <div class="buscador">
+            <input type="text" placeholder="Ingresa nombre de la ciudad" id="input-ciudad" spellcheck="false" autocomplete="false" />
+            <button id="btn-buscar">
+                <span class="img-placeholder">[img: lupa]</span>
+            </button>
+        </div>
+
+        <!-- Alerta Temprana -->
+        <div id="alerta-clima" class="alerta">
+            ⚠️ Alerta: Lluvia moderada detectada en la zona.
+        </div>
+
+        <!-- Información principal del Clima -->
+        <div class="clima-info">
+            <p class="clima-texto">Parcialmente nublado</p>
+            
+            <div class="icono-principal-placeholder">[img: icono clima principal]</div>
+            
+            <h1 class="temp">22°C</h1>
+            <h2 class="ciudad">Huancayo</h2>
+            
+            <!-- Detalles estándar -->
+            <div class="detalles">
+                <div class="col">
+                    <span class="img-placeholder">[img: gota]</span>
+                    <div>
+                        <p class="humedad">50%</p>
+                        <p>Humedad</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <span class="img-placeholder">[img: viento]</span>
+                    <div>
+                        <p class="viento">15 km/h</p>
+                        <p>Viento</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detalles de Innovación (Lluvia y UV) -->
+            <div class="detalles fila-innovacion">
+                <div class="col">
+                    <span class="img-placeholder">[img: lluvia]</span>
+                    <div>
+                        <p class="precipitacion">2.5 mm</p>
+                        <p>Lluvia</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <span class="img-placeholder">[img: uv]</span>
+                    <div>
+                        <p class="uv">11</p>
+                        <p>Índice UV</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./codigo.js"></script>
+</body>
+</html>
