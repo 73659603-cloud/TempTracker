@@ -1,138 +1,215 @@
+/* Reset milimétrico */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
+/* Fondo general: atardecer anime cálido hacia profundidad tecnológica */
 body {
-    background: #222;
+    background: linear-gradient(135deg, #2a1b3d 0%, #44315f 40%, #e94560 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Centra la app si se abre en PC */
+    align-items: flex-start;
+    color: #ffffff;
 }
 
-.contenedor {
-    width: 90%;
-    max-width: 470px;
-    background: linear-gradient(125deg, #00feba, #56548a);
-    color: #fff;
-    margin: 100px auto 0;
-    border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
-}
-
-.buscador {
+/* Contenedor móvil estricto */
+.app-movil {
     width: 100%;
+    max-width: 430px; /* Ancho de un iPhone Max */
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Tratamiento para los archivos JPG --- */
+.visor-jpg {
+    object-fit: cover;
+    border-radius: 50%; /* Los vuelve círculos perfectos */
+    border: 2px solid rgba(0, 254, 186, 0.4); /* Aro tecnológico cian */
+    box-shadow: 0 0 10px rgba(0, 254, 186, 0.2);
+}
+
+/* --- Cabecera --- */
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.marca {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.saludo {
+    display: flex;
+    flex-direction: column;
+}
+
+.hola {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nombre-app {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Buscador Glassmorphism */
+.buscador {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Efecto cristal */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px 5px 5px 20px;
 }
 
 input {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    color: #555;
-    padding: 10px 25px;
-    height: 60px;
-    border-radius: 30px;
     flex: 1;
-    margin-right: 16px;
-    font-size: 18px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
 }
 
-button {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#btn-buscar {
+    background: transparent;
+    border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-button:hover {
-    background: #739893;
-    color: #ddd;
+.icono-btn {
+    width: 35px;
+    height: 35px;
 }
 
-/* Modificadores visuales para los placeholders temporales de las imágenes */
-.img-placeholder {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px dashed #fff;
-    border-radius: 5px;
-    font-size: 10px;
-    line-height: 40px;
+/* --- Núcleo Central --- */
+.nucleo {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    color: #fff;
-    margin-right: 10px;
+    gap: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.icono-principal-placeholder {
-    width: 170px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px dashed #fff;
-    border-radius: 10px;
-    margin: 30px auto 0 auto;
-    font-size: 12px;
-    line-height: 120px;
+.ubicacion-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pin-gps {
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(233, 69, 96, 0.5); /* Aro rosa para el GPS */
+}
+
+.ciudad {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.icono-api-placeholder {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.temp {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 5px;
 }
 
 .clima-texto {
-    font-size: 15px;
-    margin-top: 25px;
-    margin-bottom: -15px;
+    font-size: 16px;
     font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-h1 {
-    font-size: 80px;
-    font-weight: 500;
+/* --- Nodos Orbitales (Grid) --- */
+.nodos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas */
+    gap: 15px; /* Separación milimétrica */
 }
 
-h2 {
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: 10px;
-}
-
-.detalles {
+.nodo-tarjeta {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 50px;
+    gap: 12px;
+    transition: transform 0.2s ease;
 }
 
-.fila-innovacion {
-    margin-top: 30px; /* Separación de la fila original */
+.nodo-img {
+    width: 40px;
+    height: 40px;
 }
 
-.col {
+.nodo-datos {
     display: flex;
-    align-items: center;
-    text-align: left;
+    flex-direction: column;
 }
 
-.humedad, .viento, .precipitacion, .uv {
-    font-size: 28px;
-    margin-top: -6px;
-}
-
-/* Estilo de la alerta de innovación */
-.alerta {
-    background: #ff4d4d;
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
-    margin-top: 25px;
+.nodo-valor {
+    font-size: 18px;
     font-weight: bold;
+}
+
+.nodo-etiqueta {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* Alerta Temprana */
+.alerta-panel {
+    display: none; /* Se activa con JS */
+    background: rgba(233, 69, 96, 0.9);
+    border-left: 4px solid #fff;
+    padding: 12px 15px;
+    border-radius: 10px;
     font-size: 14px;
-    border: 1px solid #cc0000;
+    font-weight: 500;
 }
