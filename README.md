@@ -2,7 +2,7 @@
 
 TempTracker es una aplicación web de monitoreo meteorológico en tiempo real, diseñada con un enfoque Mobile-First y una interfaz basada en telemetría de sistemas (Glassmorphism + estética tech).
 
-## 🚀 Innovación Logística (Contexto El Niño)
+## 🚀 Innovación Logística
 Más allá de mostrar la temperatura, este proyecto implementa variables extendidas de **WeatherAPI** para prevención ciudadana y logística de negocios locales:
 * **Alerta Temprana:** Detección de milímetros de precipitación (lluvia) y niveles críticos de Índice UV.
 * **Geolocalización Automática:** El sistema detecta las coordenadas del usuario mediante el API nativo del navegador (`navigator.geolocation`) y realiza una geocodificación inversa para mostrar los datos exactos del distrito actual.
