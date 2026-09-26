@@ -284,3 +284,23 @@ input::placeholder {
     border-left-color: #20c997;
     background: rgba(32, 201, 151, 0.3);
 }
+
+/* ----- ESTILOS DEL PORTAFOLIO ----- */
+.footer-portafolio {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.enlace-discreto {
+    color: rgba(255, 255, 255, 0.4); /* Semitransparente para no resaltar */
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.enlace-discreto:hover {
+    color: rgba(0, 254, 186, 0.9); /* Brillo sutil al pasar el cursor */
+    text-shadow: 0 0 8px rgba(0, 254, 186, 0.4);
+}
